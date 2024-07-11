@@ -1,0 +1,24 @@
+.imageGalleryList {
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 480px) {
+  .imageGalleryList {
+    flex-direction: row;
+  }
+  .imageGalleryList li {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+@media screen and (min-width: 991px) {
+  .imageGalleryList li {
+    flex-basis: calc((100% - 32px) / 3);
+  }
+}

@@ -1,0 +1,20 @@
+.imageSearchApp {
+  padding-top: 40px;
+  padding: 40px;
+}
+.container {
+  max-width: 80vw;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.mainTitle {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.imageSearchApp__loaderWrap,
+.imageSearchApp__buttonLoadMoreWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
