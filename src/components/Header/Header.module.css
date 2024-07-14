@@ -1,0 +1,14 @@
+.header__wrap {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 4px 4px 64px rgba(250, 139, 91, 0.2);
+}
+.mainTitle {
+  width: 100%;
+  font-size: 20px;
+}

@@ -1,0 +1,7 @@
+.sectionWrap {
+  margin: 32px 0;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 4px 4px 64px rgba(250, 139, 91, 0.2);
+  border-radius: 16px;
+}

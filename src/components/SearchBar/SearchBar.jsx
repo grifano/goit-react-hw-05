@@ -3,7 +3,7 @@ import css from "./SearchBar.module.css";
 
 export default function SearchBar({ onSearch }) {
   return (
-    <header className={css.searchBar__header}>
+    <div className={css.searchBar}>
       <Formik
         initialValues={{ query: "" }}
         onSubmit={(values, actions) => {
@@ -23,6 +23,6 @@ export default function SearchBar({ onSearch }) {
           <button type="submit">Search</button>
         </Form>
       </Formik>
-    </header>
+    </div>
   );
 }

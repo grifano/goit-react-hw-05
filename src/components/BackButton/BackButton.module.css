@@ -1,0 +1,12 @@
+.isBackButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border-color: white;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.isBackButton:hover,
+.isBackButton:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}

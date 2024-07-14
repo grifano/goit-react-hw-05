@@ -1,10 +1,26 @@
+:root {
+  --color-action: #fa8a5b;
+  --color-dark: #727597;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   background-color: #f3f4f6;
+  background: url("./assets/bg-popcorn.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #504e4f;
-} /* Reset styles */
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* Reset styles */
 h1,
 h2,
 h3,

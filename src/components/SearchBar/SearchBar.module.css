@@ -1,11 +1,9 @@
-.searchBar__header {
+.searchBar {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 16px;
   border-radius: 8px;
   background-color: white;
-  margin-bottom: 16px;
 }
 
 .searchBar__Form {
@@ -18,7 +16,6 @@
   .searchBar__Form {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     gap: 8px;
   }
 }

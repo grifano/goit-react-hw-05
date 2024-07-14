@@ -1,0 +1,24 @@
+.moviesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+.moviesList__item {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 650px) {
+  .moviesList__item {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+@media screen and (min-width: 940px) {
+  .moviesList__item {
+    flex-basis: calc((100% - 32px) / 3);
+  }
+}
+@media screen and (min-width: 1216px) {
+  .moviesList__item {
+    flex-basis: calc((100% - 48px) / 4);
+  }
+}

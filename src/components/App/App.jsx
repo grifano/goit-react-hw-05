@@ -1,11 +1,19 @@
-import css from "../App/App.module.css";
+import HomePage from "../../pages/HomePage/HomePage";
+import { Route, Routes } from "react-router-dom";
+import MoviesPage from "../../pages/MoviesPage/MoviesPage";
+import MovieDetailsPage from "../../pages/MovieDetailsPage/MovieDetailsPage";
+import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage";
+import MainLayout from "../MainLayout/MainLayout";
 
 export default function App() {
   return (
-    <div className={css.imageSearchApp}>
-      <div className={css.container}>
-        <h1 className={css.mainTitle}>Images Gallery</h1>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path={"/movies"} element={<MoviesPage />} />
+        <Route path={"/movies/:movieId"} element={<MovieDetailsPage />} />
+        <Route path={"*"} element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 }
