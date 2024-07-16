@@ -1,5 +1,11 @@
 .container {
-  max-width: 80vw;
-  padding: 0 15px;
+  max-width: 100%;
+  padding: 0 16px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 991px) {
+  .container {
+    max-width: 80vw;
+  }
 }

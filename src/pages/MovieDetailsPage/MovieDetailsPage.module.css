@@ -92,4 +92,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(4px);
   }
+  @media screen and (max-width: 991px) {
+    padding: 40px 0px;
+  }
 }

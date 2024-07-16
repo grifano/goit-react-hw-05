@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
     flex-wrap: wrap;
   }
   .movieCast__item {
@@ -15,7 +15,7 @@
     border-radius: 6px;
     padding: 6px;
     border: 1px solid var(--color-dark);
-    flex-basis: calc((100% - 24px) / 4);
+    flex-basis: calc((100% - 48px) / 4);
   }
   .movieCast__profile {
     border-radius: 4px;
