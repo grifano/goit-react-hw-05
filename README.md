@@ -44,7 +44,7 @@ This repository contained the implementation of a movie search application using
 ## Live Demo
 
 - **Source Files**: [GitHub Repository](https://github.com/grifano/goit-react-hw-05.git)
-- **Working Page**: [Live Preview]()
+- **Working Page**: [Live Preview](https://goit-react-hw-05-virid-one.vercel.app/)
 
 ## Project Setup
 
