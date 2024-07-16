@@ -4,7 +4,7 @@
 
 ## Module 5: Routing and Lazy load
 
-<img src="./src/assets/screenshot.png" alt="profile card, list of cards with animals icons" width="50%"/>
+<img src="./src/assets/screenshot.webp" alt="profile card, list of cards with animals icons" width="50%"/>
 
 This repository contained the implementation of a movie search application using React with routing. The project was created with Vite, utilized React Router for routing, Axios for HTTP requests, and styled components with CSS modules. The application had several key functionalities, which are summarized below:
 
