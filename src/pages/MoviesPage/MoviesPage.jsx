@@ -7,17 +7,21 @@ import CustomErrorMessage from "../../components/CustomErrorMessage/CustomErrorM
 import Container from "../../components/Container/Container.jsx";
 import SectionWrap from "../../components/SectionWrap/SectionWrap.jsx";
 import SearchBar from "../../components/SearchBar/SearchBar.jsx";
-import { useLocation } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 
 export default function MoviesPage() {
-  const [newQuery, setNewQuery] = useState(null);
   const [movies, setMovies] = useState([]);
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const savedSearchQuery = searchParams.get("searchParams") ?? "";
+  const [newQuery, setNewQuery] = useState(savedSearchQuery);
 
   const location = useLocation();
 
   const handleSearch = (value) => {
+    searchParams.set("searchParams", value);
+    setSearchParams(searchParams);
     setNewQuery(value);
   };
 
@@ -47,7 +51,9 @@ export default function MoviesPage() {
             <CustomErrorMessage message="Oops! Something went wrong 🤷‍♂️, let's trying to reload the page 😉" />
           )}
           {loader && <Loader />}
-          {movies.length > 0 && <MoviesList movies={movies} state={location} />}
+          {movies.length > 0 && (
+            <MoviesList movies={movies} location={location} />
+          )}
           <Toaster />
         </SectionWrap>
       </Container>

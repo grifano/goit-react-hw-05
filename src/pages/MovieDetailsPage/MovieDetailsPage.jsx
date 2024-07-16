@@ -1,12 +1,19 @@
-import { useEffect, useState } from "react";
-import css from "./MovieDetailsPage.module.css";
+import { Suspense, useEffect, useRef, useState } from "react";
+import clsx from "clsx";
 import toast from "react-hot-toast";
 import { Toaster } from "react-hot-toast";
+import { SlLike } from "react-icons/sl";
+import css from "./MovieDetailsPage.module.css";
 import { fetchMoviesById } from "../../service/movies-api";
-import { Link, useLocation, useParams } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  Outlet,
+  useLocation,
+  useParams,
+} from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import CustomErrorMessage from "../../components/CustomErrorMessage/CustomErrorMessage";
-import { SlLike } from "react-icons/sl";
 import BackButton from "../../components/BackButton/BackButton";
 import Container from "../../components/Container/Container";
 
@@ -18,9 +25,11 @@ export default function MovieDetailsPage() {
   const [movie, setMovie] = useState(null);
 
   const location = useLocation();
-  console.log(location);
+  const goBackLink = useRef(location?.state ?? "/");
 
-  const goBackLink = location?.state ?? "/";
+  const buildLinkClass = ({ isActive }) => {
+    return clsx(css.movieDetail__navLink, isActive && css.isCurrent);
+  };
 
   useEffect(() => {
     setLoader(true);
@@ -47,7 +56,7 @@ export default function MovieDetailsPage() {
         )}
         {movie && (
           <div className={css.movieDetail}>
-            <Link to={goBackLink}>
+            <Link to={goBackLink.current}>
               <BackButton />
             </Link>
             <img
@@ -76,6 +85,20 @@ export default function MovieDetailsPage() {
                     {movie.vote_average}
                   </p>
                 </div>
+              </div>
+
+              <div className={css.movieDetail__info_extra}>
+                <div className={css.movieDetail__info_links}>
+                  <NavLink className={buildLinkClass} to="cast">
+                    Cast
+                  </NavLink>
+                  <NavLink className={buildLinkClass} to="reviews">
+                    Revews
+                  </NavLink>
+                </div>
+                <Suspense fallback={<Loader />}>
+                  <Outlet />
+                </Suspense>
               </div>
             </div>
           </div>

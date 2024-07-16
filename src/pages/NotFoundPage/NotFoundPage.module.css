@@ -1,0 +1,20 @@
+.notFoundPage {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  .notFoundPage__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 48px;
+    gap: 24px;
+    background-color: #fff;
+    box-shadow: 4px 4px 64px rgba(250, 139, 91, 0.2);
+    border-radius: 16px;
+  }
+}

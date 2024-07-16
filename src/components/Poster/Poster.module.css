@@ -7,7 +7,7 @@
   overflow: hidden;
   .poster__img {
     border-radius: 6px;
-    max-width: 100%;
+    width: 100%;
     aspect-ratio: 3 / 4;
   }
   .poster__info {
@@ -30,7 +30,9 @@
       .poster__info_thumb {
         border-radius: 4px;
         flex-shrink: 1;
-        width: 40%;
+        aspect-ratio: 3 / 4;
+        width: 100%;
+        max-width: 40%;
       }
       .poster__info_headerCol {
         flex-basis: auto;

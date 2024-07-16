@@ -1,11 +1,14 @@
 import { TiArrowForward } from "react-icons/ti";
 import css from "./Poster.module.css";
 import { SlLike } from "react-icons/sl";
+import fallbackImage from "../../assets/bg-popcorn.svg";
 
 export default function Poster({
   movieDetail: { poster_path, title, overview, release_date, vote_average },
 }) {
-  const completeUrl = `https://image.tmdb.org/t/p/w500/${poster_path}`;
+  const completeUrl = poster_path
+    ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+    : fallbackImage;
   return (
     <div className={css.poster}>
       <img className={css.poster__img} src={completeUrl} alt={title} />

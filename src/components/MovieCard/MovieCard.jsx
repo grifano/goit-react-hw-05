@@ -1,9 +1,8 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import css from "./MovieCard.module.css";
 import Poster from "../Poster/Poster";
 
-export default function MovieCard({ movieDetail }) {
-  const location = useLocation();
+export default function MovieCard({ movieDetail, location }) {
   const { id } = movieDetail;
 
   return (

@@ -50,6 +50,28 @@
         font-size: 18px;
       }
     }
+    .movieDetail__info_extra {
+      padding: 24px 0;
+      .movieDetail__info_links {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+      .movieDetail__navLink {
+        cursor: pointer;
+        font-family: inherit;
+        outline: none;
+        padding: 8px 24px;
+        border-radius: 8px;
+        border: 1px solid white;
+        background-color: transparent;
+        color: #fff;
+      }
+      .isCurrent {
+        color: var(--color-dark);
+        background-color: #fff;
+      }
+    }
     .movieDetail__info_desc {
       margin-bottom: 32px;
     }

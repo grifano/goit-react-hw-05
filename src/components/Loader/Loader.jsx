@@ -2,7 +2,7 @@ import { Rings } from "react-loader-spinner";
 
 export default function Loader() {
   const spinnerStyle = {
-    position: "absolute",
+    position: "fixed",
     width: "100%",
     height: "100%",
     top: "0",

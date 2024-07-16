@@ -1,0 +1,30 @@
+.movieCast {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  color: var(--color-dark);
+  .movieCast__list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .movieCast__item {
+    border-radius: 6px;
+    padding: 6px;
+    border: 1px solid var(--color-dark);
+    flex-basis: calc((100% - 24px) / 4);
+  }
+  .movieCast__profile {
+    border-radius: 4px;
+    aspect-ratio: 3 /4;
+    margin-bottom: 4px;
+  }
+  .movieCast__actorName {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .movieCast__actorCharacter {
+    font-size: 14px;
+    font-style: italic;
+  }
+}
