@@ -5,10 +5,13 @@
   color: var(--color-dark);
   .movieCast__list {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     gap: 8px;
     flex-wrap: wrap;
   }
   .movieCast__item {
+    min-width: 180px;
     border-radius: 6px;
     padding: 6px;
     border: 1px solid var(--color-dark);
