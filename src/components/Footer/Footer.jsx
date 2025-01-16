@@ -18,33 +18,6 @@ export default function Footer() {
               className={css.footer__logoLink}
             />
           </a>
-          <div className={css.footer__follow}>
-            <p>Follow me at 👉</p>
-            <ul className={css.footer__socialList}>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/grifano/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="serhii orlenko linkedin"
-                  className={css.social__link}
-                >
-                  <TiSocialLinkedin className={css.social__linkIcon} />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/grifano"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="serhii orlenko github"
-                  className={css.social__link}
-                >
-                  <FaGithub className={css.social__linkIcon} />
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </Container>
     </footer>
